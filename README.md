@@ -6,7 +6,7 @@ if(isset($_POST['rechnen'])){
     $erg = sqrt($height * $weight / 3600);
     $ergebnis = round($erg, 2);
     $anzeige = true;
-   
+    echo "<p>Your body surface is: $ergebnis m²</p>";
   }
 
 ?>
@@ -19,6 +19,8 @@ if(isset($_POST['rechnen'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobil.css"> 
 </head>
 <body>
     <?php 
@@ -26,19 +28,23 @@ if(isset($_POST['rechnen'])){
 
     ?>
     <form action="Köperoberfläche.php" method="POST">
-    <input type="number" class="hei" name="height" placeholder="h" value="<?php if(isset($height))  echo $height; ?>" required><br>
-    <input type="number" clas="wei" name="weight" placeholder="w" value="<?php if(isset($weight))  echo $weight ?>" required><br>
+    <h2>Body Surface</h2>   
+        <label for="input1">Height</label> 
+            <input type="number" class="hei" name="height" placeholder="h" value="<?php if(isset($height))  echo $height; ?>" required><br>
+        <label for="input2">Weight</label>
+            <input type="number" class="wei" name="weight" placeholder="w" value="<?php if(isset($weight))  echo $weight ?>" required><br>
     <input type="submit" name="rechnen" value="los!">
     
     </form>
     <?php 
     } ?>
     <?php 
-    if($anzeige == true) {
-        echo "<p>Ihre Körperoberfläche beträgt: $ergebnis m²</p>";
-        
+    if($anzeige) {
+        echo '<br><a href="Köperoberfläche.php"> another bill </a>';
     }
+    
     ?>
+    
 </body>
 </html>
 <style>
