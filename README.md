@@ -41,3 +41,44 @@ if(isset($_POST['rechnen'])){
     ?>
 </body>
 </html>
+<style>
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f3e6;
+  padding: 20px;
+  border-radius: 10px;
+}
+label {
+  margin: 10px 0;
+  font-weight: bold;
+}
+input[type=number] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2eee8;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+input[type=submit] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcb9a;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+}
+input[type=submit]:hover {
+  background-color: #ffbd4a;
+}
+</style>
