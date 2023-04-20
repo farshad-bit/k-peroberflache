@@ -87,4 +87,10 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #ffbd4a;
 }
+ @media only screen and (max-width: 600px) {
+    input[type=number], input[type=submit] {
+        width: 100%;
+        max-width: 100%;
+  }
+}
 </style>
